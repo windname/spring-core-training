@@ -7,6 +7,6 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public void cashWithdraw(float amount) {
-        System.out.println("Withdraw money ver5: " + amount);
+        System.out.println("Withdraw money: " + amount);
     }
 }

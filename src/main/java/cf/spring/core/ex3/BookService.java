@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * Make configuration with java code
  */
 public class BookService {
+
     @Autowired
     private PaymentService paymentService;
 

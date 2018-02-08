@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * Bean scope example (prototype, singleton, session, etc)
  */
 public class BookService {
+
     @Autowired
     private PaymentService paymentService;
 

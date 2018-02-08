@@ -9,7 +9,7 @@ public class CoreApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(CoreApplication.class, args);
-		BookService service = (BookService)ctx.getBean("BookService3");
+		BookService service = (BookService)ctx.getBean("MyBookService");
 		service.buyBook();
 	}
 }

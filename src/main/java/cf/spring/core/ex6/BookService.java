@@ -20,12 +20,15 @@ public class BookService {
     @Value("${promo.books}")
     private List<String> promoBooks;
 
-    private String randomPromo;
+    @Value("#{ T(java.lang.Math).random() * 100.0 }")
+    private long randomPromo;
 
     public void buyBook() {
         paymentService.cashWithdraw(400f);
         System.out.println("We offer you promo books" + promoBooks);
         System.out.println("User has baugh a book from store:" + shopName);
+        System.out.println("User has random number:" + randomPromo);
+
     }
 
 }

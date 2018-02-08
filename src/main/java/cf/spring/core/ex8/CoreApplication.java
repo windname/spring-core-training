@@ -12,7 +12,8 @@ public class CoreApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(CoreApplication.class, args);
-		BookService service = (BookService)ctx.getBean(BookService.class);
-		service.buyBook();
+//		BookService service = (BookService)ctx.getBean(BookService.class);
+		PaymentService service = (PaymentService)ctx.getBean(PaymentService.class);
+		service.cashWithdraw(100F);
 	}
 }

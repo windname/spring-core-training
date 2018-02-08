@@ -13,14 +13,15 @@ public class CoreApplication {
 	@Autowired
 	Environment env;
 
+	@Bean("shopName")
+	public String getShipName() {
+		return env.getProperty("shop.name");
+	}
+
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(CoreApplication.class, args);
 		BookService service = (BookService)ctx.getBean(BookService.class);
 		service.buyBook();
 	}
 
-	@Bean("shopName")
-	public String getShipName() {
-		return env.getProperty("shop.name");
-	}
 }
